@@ -31,15 +31,14 @@ public class Homework_11 {
     //Task 1
     public static int sumOfNumbersInArray(int[] array) {
 
-        if (checkDecimalArray(array)) {
-            int sum = 0;
-            for (int i = 0; i < array.length; i++) {
-                sum += array[i];
-            }
-            return sum;
-        } else {
-            return Integer.MIN_VALUE; //Не знаю что вернуть если у нас массив пустой или null
+        if (!checkDecimalArray(array)) return Integer.MIN_VALUE;
+
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
         }
+        return sum;
+
     }
 
     //Task 2
@@ -79,32 +78,29 @@ public class Homework_11 {
     public static int[] deleteNumFromArray(int[] array, int value) {
         int[] arr;
 
-        if (checkDecimalArray(array)) {
+        if (!checkDecimalArray(array)) return new int[0];
 
-            int counter = 0;
-            for (int i = 0; i < array.length; i++) {
-                if (array[i] == value) {
-                    counter++;
-                }
+        int counter = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == value) {
+                counter++;
             }
-
-            if (counter == 0) return array;
-            if (counter == array.length) return new int[0];
-
-            arr = new int[array.length - counter];
-            int j = 0;
-
-            for (int i = 0; i < array.length; i++) {
-                if (array[i] != value) {
-                    arr[j] = array[i];
-                    j++;
-                }
-
-            }
-
-        } else {
-            return new int[0];
         }
+
+        if (counter == 0) return array;
+        if (counter == array.length) return new int[0];
+
+        arr = new int[array.length - counter];
+        int j = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] != value) {
+                arr[j] = array[i];
+                j++;
+            }
+
+        }
+
         return arr;
     }
 
