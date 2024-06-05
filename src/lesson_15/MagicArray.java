@@ -41,8 +41,9 @@ public class MagicArray {
     //Конструктор, который принимает массив и создает MagiArray с такими же значениями
     public MagicArray(int[] array) {
 
+
         cursor = array.length;
-        this.array = new int[cursor];
+        this.array = new int[cursor * 2];
 
         for (int i = 0; i < cursor; i++) {
             this.array[i] = array[i];
@@ -133,6 +134,8 @@ public class MagicArray {
     //Task 9
     //Удаление элемента по значению removeByValue()
     public int removeByValue(int value) {
+
+
         int index = findIndexByValue(value);
         if (index != -1) removeByIndex(index);
 
@@ -143,7 +146,8 @@ public class MagicArray {
     //Поиск элемента по значению
     public int findIndexByValue(int value) {
         int index = -1;
-        for (int i = 0; i < cursor - 1; i++) {
+
+        for (int i = 0; i < cursor; i++) {
             if (array[i] == value) {
                 index = i;
             }
@@ -151,23 +155,48 @@ public class MagicArray {
         return index;
     }
 
+
+
     //Task 11
     //Замена значения по индексу
-    public void changeValueByIndex(int value, int index) {
+    public int changeValueByIndex(int value, int index) {
         int indexOf = getValue(index);
 
         if (indexOf != Integer.MIN_VALUE) {
             array[index] = value;
         }
 
+        return indexOf;
+
     }
 
     //Task 12
     //Вернуть наш магический массив в виде обычного массива
-    public void printArray() {
-        System.out.print("[");
+    public int[] getArray() {
+
+        int[] arr = new int[cursor];
         for (int i = 0; i < cursor; i++) {
-            System.out.print(array[i] + ((i < cursor - 1) ? ", " : "]\n"));
+            arr[i] = array[i];
         }
+
+        return arr;
     }
+
+    public int lengthByHande () {
+        int maxIndex = 0;
+        try {
+            for (int i = 0; ;i++) {
+                if(array[i] != 0){
+
+                }
+                array[i] += 0;
+                maxIndex = i;
+            }
+        }catch (Exception e){
+            System.out.println("Something went wrong.");
+        }
+
+        return maxIndex;
+    }
+
 }
