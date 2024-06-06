@@ -27,42 +27,66 @@ public class Dog {
     static int counter;
     private String name;
     private int jumpHeight;
+    private final int maxJump;
+
 
     public Dog(String name, int jumpHeight) {
         this.name = name;
         this.jumpHeight = jumpHeight;
+        this.maxJump = jumpHeight * 2;
     }
 
     public void training() {
         jumpHeight += JUMP_INCREASE;
-        System.out.println(name + " is training, jump height: " + jumpHeight);
+
+        if(jumpHeight > maxJump){
+            jumpHeight = maxJump;
+        }
+        System.out.println(name + "is training");
     }
 
     public void jump() {
         System.out.println(name + " jumps");
-
         counter++;
     }
 
     public void overcomeTheBarrier(int barrier) {
+        System.out.println("Barrier: " + barrier);
 
-        if (jumpHeight > barrier) jump();
+        if (jumpHeight >= barrier) {
+            System.out.printf("Dog %s get barrier %d. Jump: %d\n", name, barrier, jumpHeight);
+            jump();
+        }
 
-        if (jumpHeight < barrier && maxJumpHeight() < barrier) {
+        if (maxJump < barrier) {
             System.out.println("I cannot jump so height");
         }
 
-        if (jumpHeight < barrier && maxJumpHeight() >= barrier) {
+        if (maxJump >= barrier) {
             while (jumpHeight < barrier) {
                 training();
+                System.out.println();
             }
+            System.out.printf("Dog %s get barrier %d. Jump: %d\n", name, barrier, jumpHeight);
             jump();
         }
+
     }
 
-    private int maxJumpHeight() {
-        return jumpHeight * 2;
+    public String toString() {
+        return "{Dog " + name + "; current jump: " + jumpHeight + "}";
     }
 
 
+    public String getName() {
+        return name;
+    }
+
+    public int getJumpHeight() {
+        return jumpHeight;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

@@ -41,13 +41,15 @@ public class MagicArray {
     //Конструктор, который принимает массив и создает MagiArray с такими же значениями
     public MagicArray(int[] array) {
 
+        if( array != null){
+            cursor = array.length;
+            this.array = new int[cursor * 2];
+            add(array);
 
-        cursor = array.length;
-        this.array = new int[cursor * 2];
-
-        for (int i = 0; i < cursor; i++) {
-            this.array[i] = array[i];
+        }else {
+            this.array = new  int[10];
         }
+
     }
 
     //Task 1
@@ -64,7 +66,7 @@ public class MagicArray {
 
     //Task 2
     // Динамическое расширение размера массива
-    public void expandArray() {
+    private void expandArray() {
         int[] result = new int[array.length * 2];
 
         for (int i = 0; i < array.length; i++) {

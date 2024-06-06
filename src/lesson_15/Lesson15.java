@@ -43,7 +43,7 @@ public class Lesson15 {
         int [] arr;
 
         // [1 2 34  6]  + [6 8 9 10 12]
-        int [] a1 = {1,2,34,6};
+        int [] a1 = null;
         int [] a2 = {6,8, 9, 10 , 12};
         MagicArray ma2 = new MagicArray(a1);
         ma2.add(a2);
