@@ -2,14 +2,15 @@ package homework_20.runners;
 
 public class Amateur extends Human{
 
-
-    @Override
-    public int restTime() {
-        return 10;
+    {
+        this.setTypeRunner("Любитель");
     }
 
-    @Override
-    public int runnerSpeed() {
-        return 15;
+    public Amateur(int runSpeed, int restTime) {
+        super(runSpeed, restTime);
+    }
+
+    public Amateur() {
+        super(15, 10);
     }
 }

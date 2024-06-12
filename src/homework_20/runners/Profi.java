@@ -2,13 +2,8 @@ package homework_20.runners;
 
 public class Profi extends Amateur{
 
-    @Override
-    public int restTime() {
-        return 5;
-    }
-
-    @Override
-    public int runnerSpeed() {
-        return 25;
+    public Profi() {
+        super(25, 5);
+        this.setTypeRunner("Профи");
     }
 }
