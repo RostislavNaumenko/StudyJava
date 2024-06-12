@@ -1,5 +1,8 @@
 package homework_21;
 
+import javax.swing.*;
+import java.beans.JavaBean;
+
 public class Rectangle extends Shape{
     private int side1;
     private int side2;
@@ -34,6 +37,7 @@ public class Rectangle extends Shape{
     public void setSide2(int side2) {
         this.side2 = side2;
     }
+
 
     @Override
     public String toString() {
