@@ -1,4 +1,4 @@
-package homework_20vehicle;
+package homework_20.vehicle;
 
 public class Vehicle {
 

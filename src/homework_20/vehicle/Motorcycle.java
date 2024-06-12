@@ -1,6 +1,6 @@
-package homework_20vehicle;
+package homework_20.vehicle;
 
-public class Motorcycle extends Vehicle{
+public class Motorcycle extends Vehicle {
 
     @Override
     public void startEngine() {
