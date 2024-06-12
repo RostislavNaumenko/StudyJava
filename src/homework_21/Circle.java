@@ -27,4 +27,13 @@ public class Circle extends Shape{
         this.radius = radius;
         return radius;
     }
+
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "radius= " + radius +
+                ", area= " + findArea() +
+                ", permit= " + findPermit() +
+                '}';
+    }
 }

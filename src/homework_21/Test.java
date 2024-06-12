@@ -18,5 +18,6 @@ public class Test {
             System.out.println(shape.findArea());
             System.out.println(shape.findPermit());
         }
+
     }
 }
