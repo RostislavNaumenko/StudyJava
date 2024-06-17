@@ -10,6 +10,12 @@ public class MethodsApp {
         MagicList<Double> doubleMagicList = new MagicList<>(new Double[]{1.3, 2.4, 3.7});
 
         System.out.println(Util.listSum(doubleMagicList));
+
+        MagicList <Integer> integerMagicList = new MagicList<>(new Integer[] {1,2,3,4,5,6});
+
+        Util.addNumbers(integerMagicList);
+
+        System.out.println(integerMagicList.toString());
     }
 
 
