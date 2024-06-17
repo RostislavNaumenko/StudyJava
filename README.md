@@ -1,5 +1,4 @@
-<h1 align="center">Hi there, I'm Rostyslav
-<img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
-<h2>This is my project for learning JAVA (basics)</h2>
+<h1 align="center">Learning JAVA :rocket: </h1>
+<h2 align="center">This is my project for improve my knowledge in JAVA  (basics)</h2>
 
 
