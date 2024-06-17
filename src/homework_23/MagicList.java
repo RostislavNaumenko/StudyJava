@@ -26,6 +26,7 @@ public class MagicList<T> implements MyList<T> {
     }
 
 
+
     // Добавляют в массив один элемент
     @Override
     public void add(T value) {
@@ -174,7 +175,7 @@ public class MagicList<T> implements MyList<T> {
         if (cursor == 0) return null;
         // Используем рефлексию для определения типа элементов нашего массива
         Class<T> clazz = (Class<T>) array[0].getClass();
-        System.out.println("clazz: " + clazz);
+        //System.out.println("clazz: " + clazz);
 
         // Создаем массив того же типа, как 0-й элемент в нашем массиве
         T[] result = (T[]) Array.newInstance(clazz, cursor);
@@ -185,6 +186,5 @@ public class MagicList<T> implements MyList<T> {
 
         return result;
     }
-
 
 }
