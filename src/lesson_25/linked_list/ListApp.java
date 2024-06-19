@@ -2,21 +2,14 @@ package lesson_25.linked_list;
 
 import java.util.Arrays;
 
-public class MyLinkedListApp {
+public class ListApp {
     public static void main(String[] args) {
-        MyLinkedList <Integer> linkedList = new MyLinkedList<>();
+        MyLinkedList<Integer> linkedList = new MyLinkedList<>();
+//        linkedList.add(1);
 
-        System.out.println(linkedList.toString());
+        System.out.println("getFirst(): " + linkedList.getFirst());
 
-        linkedList.add(0);
-        System.out.println(linkedList.toString());
-
-        linkedList.addFirst(2);
-
-        System.out.println(linkedList.toString());
-
-        linkedList.addFirst(6);
-
+        System.out.println("getLast(): " + linkedList.getLast());
 
         linkedList.addAll(0, 1, 2, 3, 4, 5, 6);
 
@@ -54,6 +47,7 @@ public class MyLinkedListApp {
         for (int i = 0; i < linkedList.size(); i++) {
             System.out.println(linkedList.get(i));
         }
+
 
 
     }
