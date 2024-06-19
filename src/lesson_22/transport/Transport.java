@@ -1,4 +1,4 @@
-package lesson_22.Transport;
+package lesson_22.transport;
 
 public abstract class Transport {
     protected int capasity;

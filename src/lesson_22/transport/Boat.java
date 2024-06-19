@@ -1,4 +1,4 @@
-package lesson_22.Transport;
+package lesson_22.transport;
 
 public class Boat extends Transport implements Swimable{
 
