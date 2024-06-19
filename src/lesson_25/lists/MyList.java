@@ -1,4 +1,4 @@
-package lists;
+package lesson_25.lists;
 
 public interface MyList<T> {
 

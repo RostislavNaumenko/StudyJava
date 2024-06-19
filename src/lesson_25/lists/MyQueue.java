@@ -1,4 +1,4 @@
-package lists;
+package lesson_25.lists;
 
 public interface MyQueue<T>{
     void addLast(T value); // добавить в конец

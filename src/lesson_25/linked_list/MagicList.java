@@ -1,7 +1,7 @@
 package lesson_25.linked_list;
 
 
-import lists.MyList;
+import lesson_25.lists.MyList;
 
 import java.lang.reflect.Array;
 import java.util.Iterator;

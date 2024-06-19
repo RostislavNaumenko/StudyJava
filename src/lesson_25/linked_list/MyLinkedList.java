@@ -1,8 +1,8 @@
 package lesson_25.linked_list;
 
 
-import lists.MyList;
-import lists.MyQueue;
+import lesson_25.lists.MyList;
+import lesson_25.lists.MyQueue;
 
 import java.lang.reflect.Array;
 import java.util.Iterator;
