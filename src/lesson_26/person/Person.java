@@ -110,9 +110,8 @@ public class Person {
             }
         }
 
-        if(digital && lowercase && uppercase && specialCharacter) return true;
 
-        return false;
+        return digital && lowercase && uppercase && specialCharacter;
     }
 
     @Override
