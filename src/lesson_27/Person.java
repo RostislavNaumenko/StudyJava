@@ -1,4 +1,4 @@
-package lesson_26.person;
+package lesson_27;
 
 
 public class Person {
