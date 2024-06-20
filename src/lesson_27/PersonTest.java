@@ -56,15 +56,17 @@ public class PersonTest {
 
     }
 
-    @Test
-    void testValidPassword(){
-        String validPassword = "Rostyslav@1";
+    @ParameterizedTest
+    @MethodSource("passwordValidTest")
+    void testValidPassword (String password){
 
-        person.setPassword(validPassword);
+        person.setPassword(password);
 
-        Assertions.assertEquals(validPassword, person.getPassword());
+        Assertions.assertEquals(password, person.getPassword());
+    }
 
-        System.out.println("getPassword After: " + person.getPassword());
+    static Stream<String> passwordValidTest() {
+        return Stream.of("Rostyslav@1", "ROSTy@234", "ROs@tyslav@123!", "rostyslAv$1000");
     }
 
 
