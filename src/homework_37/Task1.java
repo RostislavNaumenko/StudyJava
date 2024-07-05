@@ -12,7 +12,7 @@ public class Task1 {
     }
 
     public static List<String> getUniqueSortedWords(String str){
-        Set<String> setString =  new TreeSet<>((o1, o2) -> o1.length() - o2.length());
+        Set<String> setString =  new TreeSet<>(Comparator.comparing(String::length).thenComparing(Comparator.naturalOrder()));
         List<String> list = new ArrayList<>(List.of(str.split("[\\P{L}]+")));
         setString.addAll(list);
         List<String> resulList = new ArrayList<>(setString);

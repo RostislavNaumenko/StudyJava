@@ -26,9 +26,9 @@ public class Task3 {
                 firstUniq.remove(ch);
             }
         }
-        Character result = firstUniq.iterator().next();
 
-        return result;
+
+        return firstUniq.isEmpty() ? null : firstUniq.iterator().next();
     }
 
 }
