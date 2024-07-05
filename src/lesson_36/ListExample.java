@@ -58,6 +58,12 @@ public class ListExample {
         List<Integer> subList = list.subList(1, 4); // 1, 2, 3 - индексы
         System.out.println("subList: " + subList);
 
+        // Comparator
+
+        System.out.println("====================== list");
+        System.out.println(list);
+        list.sort((var1, var2) -> var2.compareTo(var1));
+        System.out.println(list);
 
     }
 }
