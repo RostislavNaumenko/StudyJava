@@ -101,10 +101,7 @@ public class MapExample {
         // Перебор всех пар клю-значение. И возможность применять какую-то функцию к ним
         map.forEach((k, v) -> System.out.println("Key: " + k + "; value: " + v));
 
-
-
-
-
+        System.out.println(map.remove(29));
 
 
     }
