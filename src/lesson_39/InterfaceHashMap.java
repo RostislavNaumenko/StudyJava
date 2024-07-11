@@ -11,7 +11,7 @@ public interface InterfaceHashMap<K, V>{
     V get(Object key);
 
     //Удалить пару ключ-значение по значению
-    // V remove(Object key);
+     //V remove(Object key);
 
     int size();
 

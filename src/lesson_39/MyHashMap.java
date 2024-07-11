@@ -172,7 +172,6 @@ public class MyHashMap<K, V> implements InterfaceHashMap<K, V> {
         return value;
     }
 
-
     private void resize() {
         // TODO реализовать метод увеличение числа корзин и перераспределения нод
     }
