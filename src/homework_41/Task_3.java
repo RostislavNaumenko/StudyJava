@@ -17,6 +17,7 @@ public class Task_3 {
 
         List<Integer> result = list.stream()
                 .filter(integer -> integer % 2 == 0)
+                .filter(integer -> integer != 0)
                 .map(integer -> integer * 2)
                 .collect(Collectors.toList());
 
