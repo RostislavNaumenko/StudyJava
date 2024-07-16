@@ -1,0 +1,5 @@
+Cat|8|true
+Ann|3|false
+Smit|7|true
+Bim|2|true
+Simka|5|false
